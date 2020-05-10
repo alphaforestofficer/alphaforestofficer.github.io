@@ -21,7 +21,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-              <span class="icon-bar"></span> 
+              <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#" style="font-size: 25px;">Forest Range Officer Coaching</a>
           </div>
@@ -30,6 +30,7 @@
               <li><a href="#Home">Home</a></li>
               <li><a href="#AboutUs">AboutUs</a></li>
               <li><a href="#Courses">Courses</a></li>
+              <li><a href="/testseries">OnlineTestSeries</a></li>
               <li><a href="#ContactUs">ContactUs</a></li>
               <li><a href="tel:8209673637">Call Us</a></li>
             </ul>
@@ -45,6 +46,7 @@
               By providing guidance to aspirants contionusly and make them ready to realize there dreams come true.</p>
             <a class="header__button" href="#AboutUs">AboutUs</a>
             <a class="header__button" href="#Courses">Courses</a>
+            <a class="header__button" style="margin-top:10px;" href="/testseries">OnlineTestSeries</a>
           </div>
         </div>
       </div>
@@ -72,6 +74,8 @@
               <div class="text-center steps__single">
                 <img src="assets/images/step2.png" alt="">
                 <p><b>Online Test Series</b><br>We provide free online test series Weekly updation of test series</p>
+                <a class="header__button" style="background: #d2eaff;" href="/testseries">OnlineTestSeries</a>
+
               </div>
             </div>
             <div class="col-md-4">
@@ -175,11 +179,12 @@
               <li><a href="#Home">Home</a></li>
               <li><a href="#AboutUs">What We Do</a></li>
               <li><a href="#Courses">Courses</a></li>
+              <li><a href="/testseries">OnlineTestSeries</a></li>
               <li><a href="#ContactUs">Contact Us</a></li>
             </h2>
           </div>
 
-          
+
           <div class="col-md-4 footer__link">
             <h2>Contact Us</h2>
             <h3>Alpha Plus</h3>
@@ -202,7 +207,7 @@
 
   <script>
     $(document).ready(function() {
-      
+
       $('button').click( function(e) {
         $('.collapse').collapse('hide');
       });
@@ -210,11 +215,11 @@
 
 
       $("#ContactBtn").click(function(){
-        let tempData = {formType: "contact", baseSite:"forestrangeofficer"}
-        let inputs = document.getElementById("contact-section").getElementsByClassName("form-control")
+        var tempData = {formType: "contact", baseSite:"forestrangeofficer"}
+        var inputs = document.getElementById("contact-section").getElementsByClassName("form-control")
         for (i of inputs){ tempData[i.placeholder]= i.value}
-		
-        let url = "https://script.google.com/macros/s/AKfycbxRoNqOO9quPX3VBjkE0ecWofkn6QR8T8C03XmfaA0WKPyRUVBr/exec"
+
+        var url = "https://script.google.com/macros/s/AKfycbxRoNqOO9quPX3VBjkE0ecWofkn6QR8T8C03XmfaA0WKPyRUVBr/exec"
         $.post(url, tempData, function(result){
           alert("We will contact you shortly")
           for (i of inputs){ i.value= "" }
@@ -223,9 +228,8 @@
 	    });
 
 
-      
+
     });
   </script>
 </body>
-</html>  
-
+</html>
